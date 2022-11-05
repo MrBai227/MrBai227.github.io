@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Script to root AVDs running with QEMU Emulator from Android Studio">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="RootAvd">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="RootAvd"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Script to root AVDs running with QEMU Emulator from Android Studio" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Script to root AVDs running with QEMU Emulator from Android Studio - RootAvd"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    
+        <meta name="twitter:card" content="summary" />
+    
+    
+    
+
+    <!-- Title -->
+    
+    <title>RootAvd - Script to root AVDs running with QEMU Emulator from Android Studio - RootAvd</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2022/11/05/rootavd/">
+                RootAvd
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2022-11-05</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="rootAVD"><a href="#rootAVD" class="headerlink" title="rootAVD"></a>rootAVD</h1><h3 id="newbit-xda-developers"><a href="#newbit-xda-developers" class="headerlink" title="newbit @ xda-developers"></a><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/m/newbit.1350876">newbit @ xda-developers</a></h3><p>A Script to…</p>
+<ul>
+<li>root your Android Studio Virtual Device (AVD), with Magisk (Stable, Canary or Alpha)</li>
+<li>patch its fstab</li>
+<li>download and install the USB HOST Permissions Module for Magisk</li>
+<li>install custom build Kernel and its Modules</li>
+<li>download and install AOSP prebuilt Kernel and its Modules</li>
+</ul>
+<p>…within seconds.</p>
+<h2 id="Install-Magisk"><a href="#Install-Magisk" class="headerlink" title="Install Magisk"></a>Install Magisk</h2><h3 id="Download-rootAVD-via"><a href="#Download-rootAVD-via" class="headerlink" title="Download rootAVD via"></a>Download rootAVD via</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/newbit1/rootAVD/archive/refs/heads/master.zip">Click</a></li>
+<li><code>git clone https://github.com/newbit1/rootAVD.git</code></li>
+</ul>
+<h3 id="Preconditions"><a href="#Preconditions" class="headerlink" title="Preconditions"></a>Preconditions</h3><ul>
+<li>the AVD is running</li>
+<li>a working Internet connection for the Menu</li>
+<li>a command prompt &#x2F; terminal is opened</li>
+<li><code>adb shell</code> will connect to the running AVD</li>
+</ul>
+<h3 id="Use-Case-Examples"><a href="#Use-Case-Examples" class="headerlink" title="Use Case Examples"></a>Use Case Examples</h3><h4 id="on-MacOS"><a href="#on-MacOS" class="headerlink" title="on MacOS"></a>on MacOS</h4><img src="img/rootAVD_MacOS.gif" width="50%" height="50%"/>
+
+<h4 id="BlueStacks-4-on-MacOS"><a href="#BlueStacks-4-on-MacOS" class="headerlink" title="BlueStacks 4 on MacOS"></a>BlueStacks 4 on MacOS</h4><img src="img/rootAVD_MacOS_BlueStacks.gif" width="50%" height="50%"/>
+
+<h4 id="on-Windows"><a href="#on-Windows" class="headerlink" title="on Windows"></a>on Windows</h4><img src="img/rootAVD_Windows.gif" width="50%" height="50%"/>
+
+<h4 id="on-Linux"><a href="#on-Linux" class="headerlink" title="on Linux"></a>on Linux</h4><img src="img/rootAVD_Linux.gif" width="50%" height="50%"/>
+
+<h3 id="How-to-Install-ADB-Android-SDK-Platform-Tools"><a href="#How-to-Install-ADB-Android-SDK-Platform-Tools" class="headerlink" title="How to Install ADB (Android SDK Platform-Tools)"></a>How to Install ADB (Android SDK Platform-Tools)</h3><ul>
+<li>Open Android Studio -&gt; SDK Manager -&gt; Android SDK -&gt; SDK Tools -&gt; Check on <strong>Android SDK Platform-Tools</strong> -&gt; Apply<img src="https://user-images.githubusercontent.com/37043777/140064719-ea2dd704-1aea-4c38-9725-3edbdafe7924.png" width="200" height="200" /></li>
+</ul>
+<h2 id="rootAVD-Help-Menu"><a href="#rootAVD-Help-Menu" class="headerlink" title="rootAVD Help Menu"></a>rootAVD Help Menu</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">rootAVD A Script to root AVD by NewBit XDA</span><br><span class="line"></span><br><span class="line">Usage:	rootAVD [DIR/ramdisk.img] [OPTIONS] | [EXTRA_CMDS]</span><br><span class="line">or:	rootAVD [ARGUMENTS]</span><br><span class="line"></span><br><span class="line">Arguments:</span><br><span class="line">	ListAllAVDs			Lists Command Examples for ALL installed AVDs</span><br><span class="line"></span><br><span class="line">	EnvFixTask			Requires Additional Setup fix</span><br><span class="line">					- construct Magisk Environment manual</span><br><span class="line">					- only works with an already Magisk patched ramdisk.img</span><br><span class="line">					- without [DIR/ramdisk.img] [OPTIONS] [PATCHFSTAB]</span><br><span class="line">					- needed since Android 12 (S) rev.1</span><br><span class="line">					- not needed anymore since Android 12 (S) API 31 and Magisk Alpha</span><br><span class="line">					- Grant Shell Su Permissions will pop up a few times</span><br><span class="line">					- the AVD will reboot automatically</span><br><span class="line"></span><br><span class="line">	InstallApps			Just install all APKs placed in the Apps folder</span><br><span class="line"></span><br><span class="line">Main operation mode:</span><br><span class="line">	DIR				a path to an AVD system-image</span><br><span class="line">					- must always be the 1st Argument after rootAVD</span><br><span class="line">	</span><br><span class="line">ADB Path | Ramdisk DIR:</span><br><span class="line">	[M]ac/Darwin:			export PATH=~/Library/Android/sdk/platform-tools:$PATH</span><br><span class="line">					~/Library/Android/sdk/system-images/android-$API/google_apis_playstore/x86_64/</span><br><span class="line">	</span><br><span class="line">	[L]inux:			export PATH=~/Android/Sdk/platform-tools:$PATH</span><br><span class="line">					~/Android/Sdk/system-images/android-$API/google_apis_playstore/x86_64/</span><br><span class="line">	</span><br><span class="line">	[W]indows:			set PATH=%LOCALAPPDATA%\Android\Sdk\platform-tools;%PATH%</span><br><span class="line">					%LOCALAPPDATA%\Android\Sdk\system-images\android-$API\google_apis_playstore\x86_64\</span><br><span class="line">	</span><br><span class="line">	$API:				25,29,30,S,etc.</span><br><span class="line">	</span><br><span class="line">Except for EnvFixTask, ramdisk.img must be untouched (stock).</span><br><span class="line">	</span><br><span class="line">Options:</span><br><span class="line">	restore				restore all existing .backup files, but doesn&#x27;t delete them</span><br><span class="line">					- the AVD doesn&#x27;t need to be running</span><br><span class="line">					- no other Argument after will be processed</span><br><span class="line">	</span><br><span class="line">	InstallKernelModules		install custom build kernel and its modules into ramdisk.img</span><br><span class="line">					- kernel (bzImage) and its modules (initramfs.img) are inside rootAVD</span><br><span class="line">					- both files will be deleted after installation</span><br><span class="line">	</span><br><span class="line">	InstallPrebuiltKernelModules	download and install an AOSP prebuilt kernel and its modules into ramdisk.img</span><br><span class="line">					- similar to InstallKernelModules, but the AVD needs to be online</span><br><span class="line">	</span><br><span class="line">Options are exclusive, only one at the time will be processed.</span><br><span class="line">	</span><br><span class="line">Extra Commands:</span><br><span class="line">	DEBUG				Debugging Mode, prevents rootAVD to pull back any patched file</span><br><span class="line">	</span><br><span class="line">	PATCHFSTAB			fstab.ranchu will get patched to automount Block Devices like /dev/block/sda1</span><br><span class="line">					- other entries can be added in the script as well</span><br><span class="line">					- a custom build Kernel might be necessary</span><br><span class="line"></span><br><span class="line">	GetUSBHPmodZ			The USB HOST Permissions Module Zip will be downloaded into /sdcard/Download</span><br><span class="line">	</span><br><span class="line">Extra Commands can be combined, there is no particular order.</span><br><span class="line">	</span><br><span class="line">Notes: rootAVD will</span><br><span class="line">- always create .backup files of ramdisk.img and kernel-ranchu</span><br><span class="line">- replace both when done patching</span><br><span class="line">- show a Menu, to choose the Magisk Version (Stable || Canary || Alpha), if the AVD is online</span><br><span class="line">- make the choosen Magisk Version to its local</span><br><span class="line">- install all APKs placed in the Apps folder</span><br></pre></td></tr></table></figure>
+<h3 id="Linux-amp-MacOS"><a href="#Linux-amp-MacOS" class="headerlink" title="Linux &amp; MacOS"></a>Linux &amp; MacOS</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Command Examples:</span><br><span class="line">./rootAVD.sh</span><br><span class="line">./rootAVD.sh ListAllAVDs</span><br><span class="line">./rootAVD.sh EnvFixTask</span><br><span class="line">./rootAVD.sh InstallApps</span><br><span class="line"></span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img restore</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br></pre></td></tr></table></figure>
+
+<details>
+<summary>Command Examples: for ALL installed AVDs</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">./rootAVD.sh</span><br><span class="line">./rootAVD.sh ListAllAVDs</span><br><span class="line">./rootAVD.sh EnvFixTask</span><br><span class="line">./rootAVD.sh InstallApps</span><br><span class="line"></span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/android-automotive-playstore/x86/ramdisk.img</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/android-automotive-playstore/x86/ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/android-automotive-playstore/x86/ramdisk.img restore</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/android-automotive-playstore/x86/ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/android-automotive-playstore/x86/ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/android-automotive-playstore/x86/ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br><span class="line"></span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/google_apis_playstore/x86_64/ramdisk.img</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/google_apis_playstore/x86_64/ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/google_apis_playstore/x86_64/ramdisk.img restore</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/google_apis_playstore/x86_64/ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/google_apis_playstore/x86_64/ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-29/google_apis_playstore/x86_64/ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br><span class="line"></span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/ramdisk.img</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/ramdisk.img restore</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-30/google_apis_playstore/x86_64/ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br><span class="line"></span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img restore</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.sh ~/Library/Android/sdk/system-images/android-31/google_apis_playstore/x86_64/ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br></pre></td></tr></table></figure>
+</details>
+
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Command Examples:</span><br><span class="line">rootAVD.bat</span><br><span class="line">rootAVD.bat ListAllAVDs</span><br><span class="line">rootAVD.bat EnvFixTask</span><br><span class="line">rootAVD.bat InstallApps</span><br><span class="line"></span><br><span class="line">rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img</span><br><span class="line">rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img restore</span><br><span class="line">rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img InstallKernelModules</span><br><span class="line">rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br></pre></td></tr></table></figure>
+
+<details>
+<summary>Command Examples: for ALL installed AVDs</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">./rootAVD.bat</span><br><span class="line">./rootAVD.bat ListAllAVDs</span><br><span class="line">./rootAVD.bat EnvFixTask</span><br><span class="line">./rootAVD.bat InstallApps</span><br><span class="line"></span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\android-automotive-playstore\x86\ramdisk.img</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\android-automotive-playstore\x86\ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\android-automotive-playstore\x86\ramdisk.img restore</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\android-automotive-playstore\x86\ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\android-automotive-playstore\x86\ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\android-automotive-playstore\x86\ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br><span class="line"></span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\google_apis_playstore\x86_64\ramdisk.img</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\google_apis_playstore\x86_64\ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\google_apis_playstore\x86_64\ramdisk.img restore</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\google_apis_playstore\x86_64\ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\google_apis_playstore\x86_64\ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-29\google_apis_playstore\x86_64\ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br><span class="line"></span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-30\google_apis_playstore\x86_64\ramdisk.img</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-30\google_apis_playstore\x86_64\ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-30\google_apis_playstore\x86_64\ramdisk.img restore</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-30\google_apis_playstore\x86_64\ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-30\google_apis_playstore\x86_64\ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-30\google_apis_playstore\x86_64\ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br><span class="line"></span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img DEBUG PATCHFSTAB GetUSBHPmodZ</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img restore</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img InstallKernelModules</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img InstallPrebuiltKernelModules</span><br><span class="line">./rootAVD.bat %LOCALAPPDATA%\Android\Sdk\system-images\android-31\google_apis_playstore\x86_64\ramdisk.img InstallPrebuiltKernelModules GetUSBHPmodZ PATCHFSTAB DEBUG</span><br></pre></td></tr></table></figure>
+</details>
+
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ul>
+<li>64 Bit Only Systems needs Magisk 23.x</li>
+<li>In the Menu, you can choose between the newest Magisk, Canary, Stable and Alpha, Version.</li>
+<li>With the new Option <code>s</code>, you can see and download any other Versions of Magisk</li>
+<li>Once choosen, the script will make that Version to your local one.</li>
+<li>Prebuilt Kernel and Modules will be pulled from <a target="_blank" rel="noopener" href="https://android.googlesource.com/kernel/prebuilts">AOSP</a></li>
+<li>Starting Magisk from Terminal via <code>adb shell monkey -p com.topjohnwu.magisk -c android.intent.category.LAUNCHER 1</code></li>
+<li>API 28 (Pie) is <strong>not supported</strong> at all -&gt; <a target="_blank" rel="noopener" href="https://source.android.com/devices/bootloader/partitions/system-as-root#sar-partitioning">because</a></li>
+</ul>
+<h3 id="2-Ways-to-boot-the-AVD-into-Safe-Mode"><a href="#2-Ways-to-boot-the-AVD-into-Safe-Mode" class="headerlink" title="2 Ways to boot the AVD into Safe Mode"></a>2 Ways to boot the AVD into Safe Mode</h3><ul>
+<li>1st Way - If the AVD still boots normal:<ul>
+<li>Tap and Hold the <strong>Power Button</strong> until the 3 Options appear</li>
+<li>Tap and Hold the <strong>Power Off Button</strong> until <strong>Reboot to safe mode</strong> appears</li>
+</ul>
+</li>
+<li>2nd Way - If the AVD stuck while booting (<strong>black</strong> screen):<ul>
+<li>Tap and Hold the <strong>Volume Down Button</strong></li>
+<li>The Time Window is between the <strong>Launching Emulator Bar</strong> is approx <strong>half way</strong> until the <strong>Google Boot Screen</strong> appears</li>
+</ul>
+</li>
+<li>Confirmation<ul>
+<li>On the Bottom Left Corner reads: <strong>Safe mode</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="Automotive-Notes"><a href="#Automotive-Notes" class="headerlink" title="Automotive Notes"></a>Automotive Notes</h3><ul>
+<li>After patching the ramdisk.img and cycle power, switch to user 0 via <code>adb shell am switch-user 0</code><ul>
+<li>open the Magisk App and the <strong>Requires Additional Setup</strong> pops up -&gt; reboot AVD</li>
+<li>switch again to user 0<ul>
+<li>open the Magisk App -&gt; Settings -&gt; Multiuser Mode -&gt; <strong>User-Independent</strong> -&gt; reboot AVD</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Every time you want to Grant Su Permissions, switch to user 0 and then back to 10 <code>adb shell am switch-user 10</code></li>
+<li>Alternative, you can install the Module <a target="_blank" rel="noopener" href="https://github.com/seebz/magisk-single-user">magisk-single-user</a><ul>
+<li>and remove all user higher than 0 i.e. <code>adb shell pm remove-user 13</code> or <code>adb shell pm remove-user 10</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="BlueStacks-4-Notes-on-MacOs"><a href="#BlueStacks-4-Notes-on-MacOs" class="headerlink" title="BlueStacks 4 Notes on MacOs"></a>BlueStacks 4 Notes on MacOs</h3><ul>
+<li>Modules are working</li>
+<li>Zygisk doesn’t work</li>
+<li>The Home Screen Apk closes as soon as Magisk APP is installed<ul>
+<li>but you can start Magisk from Terminal via <code>adb shell monkey -p com.topjohnwu.magisk -c android.intent.category.LAUNCHER 1</code></li>
+<li>and Hide the Magisk APP to Settings i.e.</li>
+</ul>
+</li>
+<li>ADB Connection is very buggy, <code>adb kill-server</code> is necessary quite often</li>
+</ul>
+<h3 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/guide-build-mod-avd-kernel-android10-x86_64-29-root-magisk-usb-passthrough-linux.4212719">XDA [GUIDE] Build &#x2F; Mod AVD Kernel Android 10 &#x2F; 11 rootAVD [Magisk] [USB passthrough Linux] [Google Play Store API]</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/newbit1/usbhostpermissons">Inject Android Hardware USB HOST Permissions</a></li>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/script-rootavd-root-your-android-studio-virtual-device-emulator-with-magisk-android-11-linux-darwin-macos-win-google-play-store-apis.4218123">XDA [SCRIPT] rootAVD - root your Android Studio Virtual Device emulator with Magisk [Android 12][Linux][Darwin&#x2F;MacOS][WIN][Google Play Store APIs]</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/newbit1/rootCROS">rootCROS - A Script to root your Google Chrome OS installed on a non Chromebook Device</a></li>
+</ul>
+<h3 id="XDA-GUIDE-How-to-Build-Mod-Update-a-custom-AVD-Kernel-and-its-Modules"><a href="#XDA-GUIDE-How-to-Build-Mod-Update-a-custom-AVD-Kernel-and-its-Modules" class="headerlink" title="XDA [GUIDE] How to [Build|Mod|Update] a custom AVD Kernel and its Modules"></a>XDA [GUIDE] How to [Build|Mod|Update] a custom AVD Kernel and its Modules</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/guide-build-mod-update-kernel-ranchu-goldfish-5-4-5-10-gki-ramdisk-img-modules-rootavd-android-11-r-12-s-avd-google-play-store-api.4220697">[GUIDE][Build|Mod|Update][kernel-ranchu][goldfish][5.4][5.10][GKI][ramdisk.img][modules][rootAVD][Android 11(R) 12(S)][AVD][Google Play Store API]</a></li>
+</ul>
+<h3 id="How-to-root-AVDs-without-Play-Store-Google-APIs-out-of-the-box"><a href="#How-to-root-AVDs-without-Play-Store-Google-APIs-out-of-the-box" class="headerlink" title="How to root AVDs without Play Store (Google APIs) out of the box"></a>How to root AVDs without Play Store (Google APIs) out of the box</h3><h3 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h3><ul>
+<li>open a terminal -&gt; win + r <code>cmd</code><ul>
+<li>add emulator to your PATH</li>
+<li>find your AVD</li>
+<li>launch your AVD with the <code>-writable-system</code> argument  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set PATH=%LOCALAPPDATA%\Android\Sdk\emulator;%PATH%</span><br><span class="line">emulator -list-avds</span><br><span class="line">	Pixel_4_API_29</span><br><span class="line">emulator -avd Pixel_4_API_29 -writable-system</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>open a 2nd terminal -&gt; win + r <code>cmd</code><ul>
+<li>enter the following commands one by one  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">set PATH=%LOCALAPPDATA%\Android\Sdk\platform-tools;%PATH%</span><br><span class="line">adb root</span><br><span class="line">adb shell avbctl disable-verification</span><br><span class="line">adb disable-verity</span><br><span class="line">adb reboot</span><br><span class="line">adb root</span><br><span class="line">adb remount</span><br><span class="line">adb shell</span><br><span class="line">generic_x86_64:/ #</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="Compatibility-Chart"><a href="#Compatibility-Chart" class="headerlink" title="Compatibility Chart"></a><a href="CompatibilityChart.md">Compatibility Chart</a></h3><details>
+<summary>Archive</summary>
+### Magisk v23.0 Alpha Successfully tested with Stock Kernel on
+* [[Oct. 2021] - Android 12 (S) API 32 Google Apis Play Store x86_64 Sv2 r01 Windows Production Build](https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-Sv2_r01-windows.zip)
+* [[Oct. 2021] - Android 12 (S) API 32 Google Apis Play Store x86_64 Sv2 r01 Darwin/MacOS Production Build](https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-Sv2_r01-darwin.zip)
+* [[Oct. 2021] - Android 12 (S) API 31 Google Apis Play Store ARM 64 v8a r08 (M1) Darwin/MacOS Production Build](https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-31_r08-darwin.zip)
+* [[Oct. 2021] - Android 11 (R) API 30 Google Apis Play Store ARM 64 v8a r10 (M1) Darwin/MacOS Production Build](https://dl.google.com/android/repository/sys-img/google_apis_playstore/arm64-v8a-30_r10-darwin.zip)
+* [[Oct. 2021] - Android 12 (S) API 31 Google Apis Play Store x86_64 r08 Darwin/MacOS Production Build](https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-31_r08-darwin.zip)
+* [[Oct. 2021] - Android 11 (R) API 30 Google Apis Play Store x86 r09 Darwin/MacOS Production Build](https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-30_r09-darwin.zip)
+* [[Oct. 2021] - Android 11 (R) API 30 Google Apis Play Store x86_64 r10 Darwin/MacOS Production Build](https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-30_r10-darwin.zip)
+
+<h3 id="Magisk-v22-1-Successfully-tested-with-Stock-Kernel-on"><a href="#Magisk-v22-1-Successfully-tested-with-Stock-Kernel-on" class="headerlink" title="Magisk v22.1+ Successfully tested with Stock Kernel on"></a>Magisk v22.1+ Successfully tested with Stock Kernel on</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-26_r07.zip">[Oct. 2021] - Android  8 (Oreo) API 26 Google Apis Play Store x86 r07 Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-24_r19.zip">[Oct. 2021] - Android  7 (Nougat) API 24 Google Apis Play Store x86 r19 Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis/x86_64-24_r27.zip">[Oct. 2021] - Android  7 (Nougat) API 24 Google Apis x86_64 r27 Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-30_r09-windows.zip">[Oct. 2021] - Android 11 (R) API 30 Google Apis Play Store x86 r09 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-29_r08-windows.zip">[Oct. 2021] - Android 10 (Q) API 29 Google Apis Play Store x86 r08 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-30_r09-darwin.zip">[Oct. 2021] - Android 11 (R) API 30 Google Apis Play Store x86 r09 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-29_r08-darwin.zip">[Oct. 2021] - Android 10 (Q) API 29 Google Apis Play Store x86 r08 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r05-darwin.zip">[June 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r05 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r04-darwin.zip">[Apr. 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r04 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/android-wear/x86-26_r04.zip">[May. 2021] - Android Wear 8 (Oreo) API 26 Google Apis Play Store x86 r04 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/android-tv/x86-30_r03.zip">[May. 2021] - Android TV 11 (R) API 30 Google Apis Play Store x86 r03 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/android-tv/x86-29_r03.zip">[May. 2021] - Android TV 10 (Q) API 29 Google Apis Play Store x86 r03 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/android-automotive/x86-29_r01.zip">[May. 2021] - Android 10 (Q) API 29 Google Apis Play Store x86 r01 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r03-windows.zip">[Apr. 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r03 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r03-darwin.zip">[Apr. 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r03 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r02-darwin.zip">[Mar. 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r02 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r01-darwin.zip">[Mar. 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r01 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r02-windows.zip">[Mar. 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r02 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-S_r01-windows.zip">[Mar. 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r01 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis/x86_64-S_r01.zip">[Mar. 2021] - Android 12 (S) API 30 Google Apis Play Store x86_64 r01 Darwin&#x2F;MacOS User Debug Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-30_r10-darwin.zip">[Mar. 2021] - Android 11 (R) API 30 Google Apis Play Store x86_64 r10 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-30_r10-windows.zip">[Mar. 2021] - Android 11 (R) API 30 Google Apis Play Store x86_64 r10 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-29_r08-darwin.zip">[Mar. 2021] - Android 10 (Q) API 29 Google Apis Play Store x86_64 r08 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-29_r08-windows.zip">[Mar. 2021] - Android 10 (Q) API 29 Google Apis Play Store x86_64 r08 Windows Production Build</a></li>
+</ul>
+</details>
+
+<h3 id="Change-Logs"><a href="#Change-Logs" class="headerlink" title="Change Logs"></a>Change Logs</h3><h4 id="March-2022"><a href="#March-2022" class="headerlink" title="[March 2022]"></a>[March 2022]</h4><ul>
+<li>[rootAVD.sh] - Changed the need of a Magisk.zip file</li>
+<li>[General] - Added Use Case Examples as Gif</li>
+<li>[General] - Added Option to Download older Magisk Versions</li>
+<li>[rootAVD.sh] - Added BlueStacks 4 Support on MacOS</li>
+<li>[General] - Bug fixes</li>
+</ul>
+<h4 id="February-2022"><a href="#February-2022" class="headerlink" title="[February 2022]"></a>[February 2022]</h4><ul>
+<li>[General] - Updated to Magisk Stable Version 24.1</li>
+</ul>
+<details>
+<summary>Archive</summary>
+
+<h3 id="Change-Logs-1"><a href="#Change-Logs-1" class="headerlink" title="Change Logs"></a>Change Logs</h3><h4 id="October-2021"><a href="#October-2021" class="headerlink" title="[October 2021]"></a>[October 2021]</h4><ul>
+<li>[rootAVD.sh] - Added get Up-To-Date Script Routine if Script is broken</li>
+<li>[rootAVD.sh] - Updated LZ4 decompression Routine</li>
+<li>[rootAVD.sh] - Updated InstallPrebuiltKernelModules Routine to support ARM64 Kernels</li>
+<li>[rootAVD.sh] - Updated Busybox Extraction Routine</li>
+<li>[General] - Added Multiarch Busybox Binarys and 64-Bit Only Support</li>
+<li>[General] - Added Alpha Channel to the Menu</li>
+<li>[rootAVD.bat] - Added Shut Down Feature</li>
+<li>[rootAVD.sh] - Added Shut Down Feature</li>
+<li>[General] - Added Android 12 (S) API 31 Status</li>
+<li>[General] - Added Link to Android AppSecs Video about rootAVD</li>
+</ul>
+<h4 id="July-2021"><a href="#July-2021" class="headerlink" title="[July 2021]"></a>[July 2021]</h4><ul>
+<li>[rootAVD.bat] - Changed TestADB</li>
+<li>[General] - Added rootCROS Project to Links</li>
+</ul>
+<h4 id="June-2021"><a href="#June-2021" class="headerlink" title="[June 2021]"></a>[June 2021]</h4><ul>
+<li>[General] - Android 12 (S) r05</li>
+</ul>
+<h4 id="May-2021"><a href="#May-2021" class="headerlink" title="[May 2021]"></a>[May 2021]</h4><ul>
+<li>[General] - Updated to Magisk App v23.0</li>
+<li>[rootAVD.sh] - Added “AddRCscripts” Argument that *<em>install all custom <em>.rc scripts, placed in the rootAVD folder, into ramdisk.img&#x2F;overlay.d&#x2F;sbin</em></em></li>
+<li>[rootAVD.sh] - Added BusyBox Binary after the rootAVD script</li>
+<li>[rootAVD.bat] - Added ListAllAVDs and InstallApps as Arguments</li>
+<li>[rootAVD.sh] - Added “ListAllAVDs” Argument that <strong>Lists Command Examples for ALL installed AVDs</strong></li>
+<li>[rootAVD.sh] - Added “InstallApps” Argument to <strong>Just install all APKs placed in the Apps folder</strong>			</li>
+<li>[rootAVD.bat] - Added comprehensive Help Menu</li>
+</ul>
+<h4 id="Apr-2021"><a href="#Apr-2021" class="headerlink" title="[Apr. 2021]"></a>[Apr. 2021]</h4><ul>
+<li>[General] - Added comprehensive Help Menu</li>
+<li>[rootAVD.sh] - Changed “DEBUG” “PATCHFSTAB” “GetUSBHPmodZ” to Arguments</li>
+<li>[General] - Fixed some typos and functions</li>
+<li>[rootAVD.sh] - Add a Menu to choose the prebuilt Kernel and Modules Version to install</li>
+<li>[General] - Added “InstallPrebuiltKernelModules” download&#x2F;update&#x2F;install prebuilt kernel and modules</li>
+<li>[General] - Added 2 Ways to boot the AVD into Safe Mode</li>
+<li>[rootAVD.sh] - Added Android S rev 3 support</li>
+<li>[General] - Added “InstallKernelModules” update&#x2F;install custom build kernel and modules</li>
+<li>[rootAVD.sh] - Added update_lib_modules function</li>
+<li>[General] - Added “restore” to put back your backup files</li>
+<li>[General] - Updated local Magisk App v22.1</li>
+<li>[rootAVD.sh] - Added Option to Download the USB HOST Permissions Module</li>
+</ul>
+<h4 id="Mar-2021"><a href="#Mar-2021" class="headerlink" title="[Mar. 2021]"></a>[Mar. 2021]</h4><ul>
+<li>[General] - Add a Download Manager Function for bad TLS record using wget</li>
+<li>[rootAVD.bat] - Adjustments to run with the updated rootAVD.sh</li>
+<li>[General] - Add a Menu to choose the Magisk Version to install</li>
+<li>[rootAVD.sh] - Added EnvFixTask Argument to fix Requires Additional Setup in Android S</li>
+<li>[General] - Changed to BusyBox (D)ASH Standalone</li>
+<li>[General] - Re-Structured Script</li>
+<li>[rootAVD.sh] - Added “Additional Setup Required” manually for Android S</li>
+<li>[rootAVD.sh] - Updated shakalaca’s Ramdisk Repack Routine</li>
+<li>[rootAVD.sh] - Added Compression Detection for LZ4 and GZ</li>
+<li>[General] - Fixed some bugs and typos</li>
+<li>[General] - Updated to Magisk App v22.0</li>
+</ul>
+<h3 id="Magisk-v21-4-Successfully-tested-with-Stock-Kernel-on"><a href="#Magisk-v21-4-Successfully-tested-with-Stock-Kernel-on" class="headerlink" title="Magisk v21.4 Successfully tested with Stock Kernel on"></a>Magisk v21.4 Successfully tested with Stock Kernel on</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-30_r10-darwin.zip">[Jan. 2021] - Android 11 (R) API 30 Google Apis Play Store x86_64 r10 Darwin&#x2F;MacOS Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-30_r10-windows.zip">[Jan. 2021] - Android 11 (R) API 30 Google Apis Play Store x86_64 r10 Windows Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-30_r10-linux.zip">[Jan. 2021] - Android 11 (R) API 30 Google Apis Play Store x86_64 r10 Linux Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-30_r09-linux.zip">[Jan. 2021] - Android 11 (R) API 30 Google Apis Play Store x86 r09 Linux Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86_64-29_r08-linux.zip">[Dec. 2019] - Android 10 (Q) API 29 Google Apis Play Store x86_64 r09 Linux Production Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis/x86_64-29_r11.zip">[Dec. 2019] - Android 10 (Q) API 29 Google Apis x86_64 r11 User Debug Build</a></li>
+<li><a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/sys-img/google_apis_playstore/x86-24_r19.zip">[Jan. 2021] - Android  7 (Nougat) API 24 Google Apis Play Store x86 r19 Production Build</a></li>
+</ul>
+</details>
+
+<h3 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/m/topjohnwu.4470081">topjohnwu @ xda-developers</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/topjohnwu/magisk-files">topjohnwu Magisk File Host</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk">topjohnwu Magisk</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Magisk-Modules-Repo">Magisk-Modules-Repo</a></li>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/m/shakalaca.1813976">shakalaca @ xda-developers</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/shakalaca/MagiskOnEmulator">shakalaca MagiskOnEmulator</a></li>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/m/huskydg.11455139">huskydg @ xda-developers</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/HuskyDG/MagiskOnEmu">huskydg MagiskOnEmu</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/cjus/1047794#gistcomment-3313785">Akianonymus _json_value</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/tadfisher/android-nixpkgs">Tad Fisher Android Nixpkgs</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/seebz">Sébastien Corne magisk-single-user</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/remote-android/redroid-doc/tree/master/native_bridge">remote-android Native Bridge Support in ReDroid</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/vvb2060/magisk_files/">vvb2060 Magisk Alpha</a></li>
+<li><a target="_blank" rel="noopener" href="https://markdown-editor.github.io/">All-in-one Markdown editor by terrylinooo</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.htmeditor.com/author/">Online Free WYSIWYG HTML Editor</a></li>
+<li><a target="_blank" rel="noopener" href="https://htmltidy.net/">HTML Tidy - Online Markup Corrector</a></li>
+<li><a target="_blank" rel="noopener" href="https://acronis.design/ffmpeg-imagemagick-convert-video-to-gif-using-the-terminal-app-in-macos-657948adf900">ffmpeg + ImageMagick. Convert video to GIF by using Terminal.app in macOS</a></li>
+<li><a target="_blank" rel="noopener" href="https://launchpad.net/kazam">Kazam Screencaster</a></li>
+</ul>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    A Script to... <br>root your Android Studio Virtual Device (AVD), with Magisk (Stable, Canary or Alpha) <br>patch its fstab <br>download and install the USB HOST Permissions Module for Magisk <br>install custom build Kernel and its Modules <br>download and install AOSP prebuilt Kernel and its Modules <br>...within seconds.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2022/11/05/rootavd/">RootAvd</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://github.com/newbit1/rootAVD">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @RootAvd. All right reserved |  <a href="">RootAvd</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
