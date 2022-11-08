@@ -171,13 +171,15 @@
 <li>a command prompt &#x2F; terminal is opened</li>
 <li><code>adb shell</code> will connect to the running AVD</li>
 </ul>
-<h3 id="Use-Case-Examples"><a href="#Use-Case-Examples" class="headerlink" title="Use Case Examples"></a>Use Case Examples</h3><h4 id="on-MacOS"><a href="#on-MacOS" class="headerlink" title="on MacOS"></a>on MacOS</h4><img src="img/rootAVD_MacOS.gif" width="50%" height="50%"/>
+<h3 id="Use-Case-Examples"><a href="#Use-Case-Examples" class="headerlink" title="Use Case Examples"></a>Use Case Examples</h3><h4 id="on-MacOS"><a href="#on-MacOS" class="headerlink" title="on MacOS"></a>on MacOS</h4><img src="https://github.com/newbit1/video-files/blob/master/rootAVD_MacOS.gif" width="50%" height="50%"/>
 
-<h4 id="BlueStacks-4-on-MacOS"><a href="#BlueStacks-4-on-MacOS" class="headerlink" title="BlueStacks 4 on MacOS"></a>BlueStacks 4 on MacOS</h4><img src="img/rootAVD_MacOS_BlueStacks.gif" width="50%" height="50%"/>
+<h4 id="BlueStacks-4-on-MacOS"><a href="#BlueStacks-4-on-MacOS" class="headerlink" title="BlueStacks 4 on MacOS"></a>BlueStacks 4 on MacOS</h4><img src="https://github.com/newbit1/video-files/blob/master/rootAVD_MacOS_BlueStacks.gif" width="50%" height="50%"/>
 
-<h4 id="on-Windows"><a href="#on-Windows" class="headerlink" title="on Windows"></a>on Windows</h4><img src="img/rootAVD_Windows.gif" width="50%" height="50%"/>
+<h4 id="on-Windows"><a href="#on-Windows" class="headerlink" title="on Windows"></a>on Windows</h4><img src="https://github.com/newbit1/video-files/blob/master/rootAVD_Windows.gif" width="50%" height="50%"/>
 
-<h4 id="on-Linux"><a href="#on-Linux" class="headerlink" title="on Linux"></a>on Linux</h4><img src="img/rootAVD_Linux.gif" width="50%" height="50%"/>
+<h4 id="on-Linux"><a href="#on-Linux" class="headerlink" title="on Linux"></a>on Linux</h4><img src="https://github.com/newbit1/video-files/blob/master/rootAVD_Linux.gif" width="50%" height="50%"/>
+
+<h4 id="Fake-Boot-img-on-MacOS"><a href="#Fake-Boot-img-on-MacOS" class="headerlink" title="Fake Boot.img on MacOS"></a>Fake Boot.img on MacOS</h4><img src="https://github.com/newbit1/video-files/blob/master/rootAVD_MacOS_FAKEBOOTIMG.gif" width="50%" height="50%"/>
 
 <h3 id="How-to-Install-ADB-Android-SDK-Platform-Tools"><a href="#How-to-Install-ADB-Android-SDK-Platform-Tools" class="headerlink" title="How to Install ADB (Android SDK Platform-Tools)"></a>How to Install ADB (Android SDK Platform-Tools)</h3><ul>
 <li>Open Android Studio -&gt; SDK Manager -&gt; Android SDK -&gt; SDK Tools -&gt; Check on <strong>Android SDK Platform-Tools</strong> -&gt; Apply<img src="https://user-images.githubusercontent.com/37043777/140064719-ea2dd704-1aea-4c38-9725-3edbdafe7924.png" width="200" height="200" /></li>
@@ -211,10 +213,13 @@
 <h3 id="Fake-Boot-img-Function"><a href="#Fake-Boot-img-Function" class="headerlink" title="Fake Boot.img Function"></a>Fake Boot.img Function</h3><ul>
 <li>During runtime, the script will launch the Magisk APK so that you can patch the fake Boot.img within 60s</li>
 <li>The script also detects if there is already a patched Boot.img present</li>
-<li>This feature lets you also update and switch between Magisk Versions</li>
+<li>This feature lets you also update and switch between Magisk Versions<ul>
+<li>Updating a patched ramdisk will delete the overlay.d folder, all mods are gone!</li>
+</ul>
+</li>
 <li>All the ramdisk hacks like fstab, boot scripts and kernel+module updates, can not be applied,<ul>
 <li>(I don’t know a way to Pause the patching process from the Magisk APK)</li>
-<li>those hacks must be done first, the classical way via the script, and once the ramdisk hacks are applied, the desired Magisk Version can be installed</li>
+<li>those hacks can be done, the classical way via the script, with the working and patched ramdisk</li>
 </ul>
 </li>
 <li>If a not proper working ramdisk prevents the Magisk APK from beeing installed and starting, use the toggleRamdisk Argument to stack your patched,<br>but not yet 100% working ramdisk away, boot the AVD with the Stock ramdisk, toggleRamdisk back, and run the script with the FAKEBOOTIMG Argument</li>
@@ -321,6 +326,12 @@
 </details>
 
 <h3 id="Change-Logs"><a href="#Change-Logs" class="headerlink" title="Change Logs"></a>Change Logs</h3><h4 id="November-2022"><a href="#November-2022" class="headerlink" title="[November 2022]"></a>[November 2022]</h4><ul>
+<li>[General] - Updated to Magisk Stable Version 25.2</li>
+<li>[General] - Added FAKEBOOTIMG Use Case Examples as Gif</li>
+<li>[rootAVD.sh] - Added support for adding the stub.apk if present</li>
+<li>[General] - Added support for already patched ramdisk files</li>
+<li>[General] - removed the EnvFixTask Argument</li>
+<li>[General] - Bug fixes</li>
 <li>[rootAVD.sh] - Added FAKEBOOTIMG Argument that creates a fake Boot.img which can be patched directed from the Magisk APK</li>
 </ul>
 <h4 id="March-2022"><a href="#March-2022" class="headerlink" title="[March 2022]"></a>[March 2022]</h4><ul>
